@@ -28,7 +28,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Lora', serif;
   background: var(--pink);
-  color: var(--red);
+  color: var(--red-dark);
   overflow-x: hidden;
 }
 
@@ -101,18 +101,20 @@ body::before {
 .nav-links a:hover { opacity: 0.6; }
 .nav-links a.active { opacity: 1; border-bottom: 2px solid var(--red); padding-bottom: 2px; }
 
-/* Mobile menu toggle */
+/* Mobile menu toggle — hidden on desktop */
 .nav-toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  z-index: 201;
+  position: relative;
 }
 
 .nav-toggle span {
   display: block;
-  width: 22px;
+  width: 24px;
   height: 2.5px;
   background: var(--red);
   margin: 5px 0;
@@ -123,6 +125,62 @@ body::before {
 .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* Mobile tile overlay — hidden by default */
+.mobile-nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--pink);
+  z-index: 200;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-nav-overlay.open {
+  display: flex;
+  opacity: 1;
+}
+
+.mobile-nav-overlay a {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  padding: 1.4rem 1rem;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--red);
+  text-decoration: none;
+  border: 2px solid var(--red);
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-overlay a:hover,
+.mobile-nav-overlay a.active {
+  background: var(--red);
+  color: var(--pink);
+}
+
+.mobile-nav-overlay .mobile-nav-tagline {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  color: var(--red);
+  margin-top: 1rem;
+  border: none;
+  padding: 0;
+}
 
 /* ============ HERO ============ */
 .hero {
@@ -866,19 +924,18 @@ footer .footer-nav a:hover { opacity: 0.7; }
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 700px) {
-  /* Mobile nav — simple row, tighter spacing */
+  /* Mobile nav — hamburger only */
   .site-nav {
-    padding: 0.5rem 0.8rem;
+    padding: 0.5rem 1rem;
+    justify-content: flex-end;
   }
 
   .nav-links {
-    gap: 0.6rem;
-    justify-content: center;
+    display: none;
   }
 
-  .nav-links a {
-    font-size: 0.7rem;
-    letter-spacing: 0.03em;
+  .nav-toggle {
+    display: block;
   }
 
   /* Hero poster fills screen width */

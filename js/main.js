@@ -25,22 +25,23 @@ if (nav) {
   });
 }
 
-// Mobile nav toggle
+// Mobile nav toggle — hamburger opens tile overlay
 const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+const mobileOverlay = document.querySelector('.mobile-nav-overlay');
 
-if (navToggle && navLinks) {
+if (navToggle && mobileOverlay) {
   navToggle.addEventListener('click', () => {
+    const isOpen = mobileOverlay.classList.contains('open');
     navToggle.classList.toggle('open');
-    navLinks.classList.toggle('open');
-    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    mobileOverlay.classList.toggle('open');
+    document.body.style.overflow = isOpen ? '' : 'hidden';
   });
 
-  // Close mobile nav when a link is clicked
-  navLinks.querySelectorAll('a').forEach(link => {
+  // Close overlay when a nav tile is tapped
+  mobileOverlay.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navToggle.classList.remove('open');
-      navLinks.classList.remove('open');
+      mobileOverlay.classList.remove('open');
       document.body.style.overflow = '';
     });
   });
