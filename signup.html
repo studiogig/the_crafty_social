@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us — The Crafty Club Social</title>
+  <meta name="description" content="Sign up to hear about The Crafty Club Social events in Bath. Mailing list, contact form, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="has-page-illustration">
+<img src="images/illustration-hands.png" alt="" class="page-illustration">
+
+<!-- NAVIGATION -->
+<nav class="site-nav scrolled">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="signup.html" class="active">Join us</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <h1 class="fade-in">Join <em>Us</em></h1>
+  <p class="page-desc fade-in">
+    Get on the list. We'll send you a nudge before each event so you never miss one.
+    Or just drop us a message — we'd love to hear from you.
+  </p>
+</section>
+
+<div class="stitch-divider">&middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
+
+<!-- MAILING LIST -->
+<section class="page-section" style="max-width: 600px;">
+  <h2 class="section-header fade-in">Stay in the <em>loop</em></h2>
+  <p class="section-sub fade-in">One email per event. That's it.</p>
+
+  <div class="signup-page-form fade-in">
+    <form onsubmit="handleSignup(event)">
+      <div class="form-group">
+        <label for="signup-name">Your name</label>
+        <input type="text" id="signup-name" name="name" placeholder="Jane" required>
+      </div>
+      <div class="form-group">
+        <label for="signup-email">Email address</label>
+        <input type="email" id="signup-email" name="email" placeholder="jane@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="signup-craft">What do you craft?</label>
+        <select id="signup-craft" name="craft">
+          <option value="">Pick one (or don't!)</option>
+          <option value="embroidery">Embroidery</option>
+          <option value="crochet">Crochet</option>
+          <option value="knitting">Knitting</option>
+          <option value="multiple">A bit of everything</option>
+          <option value="beginner">I'm just getting started</option>
+          <option value="curious">Just curious!</option>
+        </select>
+        <p class="help-text">Totally optional — we're just nosy.</p>
+      </div>
+      <button type="submit" class="btn-primary" style="width: 100%;">Count me in</button>
+      <p class="signup-note" style="margin-top: 1rem; text-align: center;">
+        We'll never share your email. Unsubscribe any time.
+      </p>
+    </form>
+  </div>
+</section>
+
+<div class="stitch-divider">&middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
+
+<!-- CONTACT FORM -->
+<section class="page-section" style="max-width: 600px;">
+  <h2 class="section-header fade-in">Get in <em>Touch</em></h2>
+  <p class="section-sub fade-in">Questions, ideas, or just want to say hello?</p>
+
+  <div class="signup-page-form fade-in">
+    <form onsubmit="handleContact(event)">
+      <div class="form-group">
+        <label for="contact-name">Your name</label>
+        <input type="text" id="contact-name" name="name" placeholder="Jane" required>
+      </div>
+      <div class="form-group">
+        <label for="contact-email">Email address</label>
+        <input type="email" id="contact-email" name="email" placeholder="jane@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="contact-message">Your message</label>
+        <textarea id="contact-message" name="message" placeholder="I'd love to come along! Can I bring my knitting group?" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width: 100%;">Send message</button>
+    </form>
+  </div>
+</section>
+
+<div class="stitch-divider">&middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
+
+<!-- SOCIALS -->
+<section class="page-section" style="text-align: center; max-width: 500px;">
+  <h2 class="section-header fade-in">Follow <em>Along</em></h2>
+  <p class="section-sub fade-in">Behind-the-scenes, project inspo, and event announcements</p>
+
+  <a href="https://instagram.com/thecraftyclubsocial" target="_blank" class="instagram-link fade-in" style="margin-top: 0;">
+    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    @thecraftyclubsocial
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">The Crafty Club Social</div>
+  <div class="tagline">Cocktails, crafts & good company</div>
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="events.html">Events</a>
+    <a href="signup.html">Join us</a>
+  </div>
+  <p>Bathampton Mill, Bath &middot; <a href="https://instagram.com/thecraftyclubsocial">@thecraftyclubsocial</a></p>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

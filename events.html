@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events — The Crafty Club Social</title>
+  <meta name="description" content="Upcoming crafting socials in Bath. Check our calendar for the next meetup.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="has-page-illustration">
+<img src="images/illustration-table.png" alt="" class="page-illustration">
+
+<!-- NAVIGATION -->
+<nav class="site-nav scrolled">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="events.html" class="active">Events</a></li>
+    <li><a href="signup.html">Join us</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <h1 class="fade-in">Upcoming <em>Events</em></h1>
+  <p class="page-desc fade-in">
+    We meet on the third Thursday of every month. Grab a drink, bring your project,
+    and settle in for an evening of crafting and good company.
+  </p>
+</section>
+
+<div class="stitch-divider">&middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
+
+<!-- NEXT EVENT -->
+<section class="page-section" style="text-align: center;">
+  <p class="section-sub fade-in">Next meetup</p>
+  <h2 class="section-header fade-in">The Crafty Club Social</h2>
+  <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0 2rem;">
+    <span class="fade-in" style="font-family: 'Lora', serif; font-size: 0.95rem; color: var(--red);">Third Thursday of the month</span>
+    <span class="fade-in" style="font-family: 'Lora', serif; font-size: 0.95rem; color: var(--red);">7pm onwards</span>
+    <span class="fade-in" style="font-family: 'Lora', serif; font-size: 0.95rem; color: var(--red);">Bathampton Mill, Bath</span>
+    <span class="fade-in" style="font-family: 'Lora', serif; font-size: 0.95rem; color: var(--red);">Free</span>
+  </div>
+  <a href="signup.html" class="btn-primary fade-in" style="display: inline-block; text-decoration: none;">Get notified</a>
+</section>
+
+<div class="stitch-divider">&middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
+
+<!-- THE DETAILS -->
+<section class="details">
+  <h2 class="fade-in">The <em>details</em></h2>
+
+  <div class="detail-items">
+    <div class="detail-item fade-in">
+      <div class="icon">1</div>
+      <div>
+        <h4>Every third Thursday of the month</h4>
+        <p>7pm onwards. Come when you can, leave when you like.</p>
+      </div>
+    </div>
+    <div class="detail-item fade-in">
+      <div class="icon">2</div>
+      <div>
+        <h4>Bathampton Mill, Bath</h4>
+        <p>A gorgeous pub right on the canal. The perfect spot for a cosy evening of crafting.</p>
+      </div>
+    </div>
+    <div class="detail-item fade-in">
+      <div class="icon">3</div>
+      <div>
+        <h4>Completely free</h4>
+        <p>Just buy your own drinks from the bar. That's it. No catch.</p>
+      </div>
+    </div>
+    <div class="detail-item fade-in">
+      <div class="icon">4</div>
+      <div>
+        <h4>Bring your own project</h4>
+        <p>Whatever you're working on — or come empty-handed and learn something new from the group.</p>
+      </div>
+    </div>
+    <div class="detail-item fade-in">
+      <div class="icon">5</div>
+      <div>
+        <h4>Women only, 18+</h4>
+        <p>A relaxed space created for women, by women. All skill levels welcome — from first-timers to old hands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stitch-divider">&middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
+
+<!-- GOOGLE CALENDAR -->
+<section class="page-section" style="padding-top: 0;">
+  <h2 class="section-header fade-in">Our <em>Calendar</em></h2>
+  <p class="section-sub fade-in">Add us to your Google Calendar so you never miss a session</p>
+
+  <div class="calendar-placeholder fade-in">
+    Google Calendar coming soon!
+    <span style="font-family: 'Lora', serif; font-size: 0.85rem; color: var(--red);">
+      We'll embed our events calendar here once we're up and running.
+    </span>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <h2 class="fade-in">Don't miss the <em>next one</em></h2>
+    <p class="cta-sub fade-in">
+      Drop your email and we'll send you a reminder before each event.
+    </p>
+    <form class="signup-form fade-in" onsubmit="handleSignup(event)">
+      <input type="email" placeholder="your@email.com" required>
+      <button type="submit">Remind me</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">The Crafty Club Social</div>
+  <div class="tagline">Cocktails, crafts & good company</div>
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="events.html">Events</a>
+    <a href="signup.html">Join us</a>
+  </div>
+  <p>Bathampton Mill, Bath &middot; <a href="https://instagram.com/thecraftyclubsocial">@thecraftyclubsocial</a></p>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
