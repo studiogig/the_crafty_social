@@ -126,9 +126,9 @@ body::before {
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-/* Mobile tile overlay — hidden by default */
+/* Mobile tile overlay — completely hidden on desktop */
 .mobile-nav-overlay {
-  display: none;
+  display: none !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -143,11 +143,6 @@ body::before {
   padding: 2rem;
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-
-.mobile-nav-overlay.open {
-  display: flex;
-  opacity: 1;
 }
 
 .mobile-nav-overlay a {
@@ -936,6 +931,15 @@ footer .footer-nav a:hover { opacity: 0.7; }
 
   .nav-toggle {
     display: block;
+  }
+
+  .mobile-nav-overlay {
+    display: none !important;
+  }
+
+  .mobile-nav-overlay.open {
+    display: flex !important;
+    opacity: 1;
   }
 
   /* Hero poster fills screen width */
