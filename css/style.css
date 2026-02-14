@@ -1006,32 +1006,32 @@ footer .footer-nav a:hover { opacity: 0.7; }
 
 .hero-event-overlay {
   position: absolute;
-  top: 18%;
-  right: 12%;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 0.6rem;
+  align-items: center;
+  gap: 1.2rem;
   z-index: 10;
-  line-height: normal; /* reset from hero's line-height: 0 */
-  text-align: right;
+  line-height: normal;
+  text-align: center;
 }
 
 .hero-instagram-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  font-family: 'Anton', sans-serif;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  gap: 0.7rem;
+  font-family: 'Caveat', cursive;
+  font-size: 2.2rem;
+  font-weight: 700;
   color: #DF1814;
   text-decoration: none;
   transition: opacity 0.3s ease;
 }
 
 .hero-instagram-link:hover { opacity: 0.7; }
-.hero-instagram-link svg { width: 24px; height: 24px; fill: #DF1814; }
+.hero-instagram-link svg { width: 32px; height: 32px; fill: #DF1814; }
 
 .hero-event-label {
   font-family: 'Caveat', cursive;
@@ -1059,20 +1059,22 @@ footer .footer-nav a:hover { opacity: 0.7; }
 
 .hero-event-btn {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 2.5rem;
-  font-family: 'Anton', sans-serif;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--pink);
-  background: #DF1814;
+  margin-top: 0;
+  padding: 1rem 3.5rem;
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #DF1814;
+  background: none;
+  border: 3.5px solid #DF1814;
+  border-radius: 50px;
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .hero-event-btn:hover {
-  opacity: 0.8;
+  background: #DF1814;
+  color: var(--pink);
 }
 
 /* ============ RSVP STICKY BAR ============ */
@@ -1197,25 +1199,25 @@ footer .footer-nav a:hover { opacity: 0.7; }
 
   /* Hero event overlay — adjust on mobile */
   .hero-event-overlay {
-    top: 12%;
-    right: 5%;
-  }
-
-  .hero-event-date {
-    font-size: 1.8rem;
-  }
-
-  .hero-event-label {
-    font-size: 1.1rem;
-  }
-
-  .hero-event-details {
-    font-size: 0.85rem;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    right: auto;
   }
 
   .hero-event-btn {
-    padding: 0.6rem 2rem;
-    font-size: 1rem;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .hero-instagram-link {
+    font-size: 1.6rem;
+  }
+
+  .hero-instagram-link svg {
+    width: 24px;
+    height: 24px;
   }
 }
 
