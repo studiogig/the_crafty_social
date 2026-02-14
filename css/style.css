@@ -185,20 +185,24 @@ a.nav-logo:active {
   max-width: 300px;
   padding: 1.4rem 1rem;
   text-align: center;
-  font-family: 'Anton', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--red);
+  font-family: 'Caveat', cursive;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #DF1814;
   text-decoration: none;
-  border: 2px solid var(--red);
+  border: 3px solid #DF1814;
+  border-radius: 12px 4px 10px 6px;
   transition: all 0.2s ease;
 }
 
+.mobile-nav-overlay a:nth-child(1) { transform: rotate(-1.2deg); border-radius: 10px 5px 12px 4px; }
+.mobile-nav-overlay a:nth-child(2) { transform: rotate(0.8deg); border-radius: 5px 11px 4px 10px; }
+.mobile-nav-overlay a:nth-child(3) { transform: rotate(-0.6deg); border-radius: 8px 4px 6px 12px; }
+.mobile-nav-overlay a:nth-child(4) { transform: rotate(1deg); border-radius: 4px 10px 8px 5px; }
+
 .mobile-nav-overlay a:hover,
 .mobile-nav-overlay a.active {
-  background: var(--red);
+  background: #DF1814;
   color: var(--pink);
 }
 
