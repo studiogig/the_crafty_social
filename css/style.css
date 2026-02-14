@@ -990,25 +990,18 @@ footer .footer-nav a:hover { opacity: 0.7; }
   top: 50%;
   transform: translateY(-50%);
   z-index: 998;
-  background: var(--red);
-  color: var(--white);
+  color: var(--red);
   text-decoration: none;
   font-family: 'Anton', sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  padding: 1rem 1.5rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  writing-mode: vertical-lr;
-  text-orientation: mixed;
+  transition: opacity 0.3s ease;
 }
 
 .floating-rsvp:hover {
-  background: var(--red-dark);
-  transform: translateY(-50%) translateX(-2px);
-  box-shadow: 0 6px 20px rgba(160, 24, 32, 0.3);
+  opacity: 0.6;
 }
 
 /* ============ RSVP STICKY BAR ============ */
@@ -1135,7 +1128,6 @@ footer .footer-nav a:hover { opacity: 0.7; }
   .floating-rsvp {
     right: 0.8rem;
     font-size: 0.9rem;
-    padding: 0.8rem 1rem;
   }
 }
 
