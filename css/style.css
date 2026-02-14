@@ -1011,11 +1011,27 @@ footer .footer-nav a:hover { opacity: 0.7; }
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0;
+  gap: 0.6rem;
   z-index: 10;
   line-height: normal; /* reset from hero's line-height: 0 */
   text-align: right;
 }
+
+.hero-instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Anton', sans-serif;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #DF1814;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.hero-instagram-link:hover { opacity: 0.7; }
+.hero-instagram-link svg { width: 18px; height: 18px; fill: #DF1814; }
 
 .hero-event-label {
   font-family: 'Caveat', cursive;
