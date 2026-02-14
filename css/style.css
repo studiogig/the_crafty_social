@@ -67,6 +67,11 @@ body::before {
   padding: 0.6rem 2rem;
 }
 
+.site-nav.scrolled .nav-logo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .nav-brand {
   font-family: 'Anton', sans-serif;
   font-size: 1.1rem;
@@ -103,12 +108,15 @@ body::before {
 .nav-links a:hover { opacity: 0.6; }
 .nav-links a.active { opacity: 1; border-bottom: 2px solid #DF1814; padding-bottom: 2px; }
 
-/* Nav logo — persistent on all screen sizes */
+/* Nav logo — hidden until scrolled (so it doesn't overlap the hero SVG on home) */
 a.nav-logo,
 a.nav-logo:visited,
 a.nav-logo:hover,
 a.nav-logo:active {
   display: block;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
   font-family: 'Anton', sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
