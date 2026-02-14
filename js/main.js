@@ -9,17 +9,15 @@ if (!window.location.hash) {
   window.scrollTo(0, 0);
 }
 
-// Scroll animations
+// Scroll animations — CSS handles stagger via transition-delay on nth-child
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, index) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, index * 80);
+      entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
@@ -58,52 +56,44 @@ const signupForm = document.getElementById('signup-form');
 if (signupForm) {
   signupForm.addEventListener('submit', () => {
     const btn = signupForm.querySelector('button');
+    const originalText = btn.textContent;
     btn.textContent = "You're on the list!";
-    btn.style.background = 'var(--terracotta)';
+    btn.style.background = 'var(--red)';
     signupForm.reset();
     setTimeout(() => {
-      btn.textContent = 'Count me in';
+      btn.textContent = originalText;
       btn.style.background = '';
     }, 3000);
   });
 }
 
-// RSVP form — submits to Google Forms, shows handwritten confirmation
+// RSVP form — submits to Google Forms, shows confirmation
 const rsvpForm = document.getElementById('rsvp-form');
 const rsvpConfirm = document.getElementById('rsvp-confirm');
-if (rsvpForm && rsvpConfirm) {
+if (rsvpForm) {
   rsvpForm.addEventListener('submit', () => {
-    // Reset animation by removing show, forcing reflow, then re-adding
-    rsvpConfirm.classList.remove('show');
-    void rsvpConfirm.offsetWidth;
-    setTimeout(() => {
-      rsvpConfirm.classList.add('show');
-    }, 200);
-    setTimeout(() => {
+    if (rsvpConfirm) {
+      // Events page — handwritten typewriter confirmation
       rsvpConfirm.classList.remove('show');
+      void rsvpConfirm.offsetWidth;
+      setTimeout(() => rsvpConfirm.classList.add('show'), 200);
+      setTimeout(() => {
+        rsvpConfirm.classList.remove('show');
+        rsvpForm.reset();
+      }, 4000);
+    } else {
+      // Signup page — button text swap
+      const btn = rsvpForm.querySelector('button');
+      const originalText = btn.textContent;
+      btn.textContent = "See you there!";
+      btn.style.background = 'var(--red)';
       rsvpForm.reset();
-    }, 4000);
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+      }, 3000);
+    }
   });
-}
-
-// Contact form handler (placeholder)
-function handleContact(e) {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData);
-
-  // TODO: Send to your backend / Cloudflare Worker
-  console.log('Contact:', data);
-
-  const btn = e.target.querySelector('button');
-  btn.textContent = "Message sent! 💌";
-  btn.style.background = 'var(--terracotta)';
-  e.target.reset();
-
-  setTimeout(() => {
-    btn.textContent = 'Send message';
-    btn.style.background = '';
-  }, 3000);
 }
 
 // Set active nav link based on current page
