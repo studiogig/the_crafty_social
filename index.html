@@ -34,8 +34,12 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img src="images/hero-poster.png" alt="The Crafty Club Social — come as you are. Third Thursday of every month, from 7pm, Bathampton Mill, Bath." class="hero-poster">
+  <img id="hero-img" src="images/hero-poster.png" alt="The Crafty Club Social — come as you are. Third Thursday of every month, from 7pm, Bathampton Mill, Bath." class="hero-poster">
 </section>
+<script>
+  var posters = ['images/hero-poster.png', 'images/hero-poster-2.png'];
+  document.getElementById('hero-img').src = posters[Math.floor(Math.random() * 2)];
+</script>
 
 <!-- CTA / SIGNUP -->
 <section class="cta">
