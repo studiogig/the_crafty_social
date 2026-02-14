@@ -3,6 +3,12 @@
    Shared JavaScript
    ============================================ */
 
+// Force scroll to top on page load (prevents browser restoring mid-page position)
+if (!window.location.hash) {
+  history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+}
+
 // Scroll animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, index) => {
