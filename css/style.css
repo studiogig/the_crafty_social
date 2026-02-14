@@ -1130,9 +1130,11 @@ footer .footer-nav a:hover { opacity: 0.7; }
     opacity: 1;
   }
 
-  /* Hero poster fills screen width */
+  /* Hero poster — crop to logo area on mobile */
   .hero-poster {
-    height: auto;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top left;
   }
 
   /* Subpage hero — less top padding on mobile */
