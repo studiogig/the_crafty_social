@@ -105,12 +105,13 @@ body::before {
 .nav-logo {
   display: none;
   font-family: 'Anton', sans-serif;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--red);
   text-decoration: none;
+  line-height: 1;
 }
 
 /* Mobile menu toggle — hidden on desktop */
@@ -758,6 +759,7 @@ body::before {
 
 /* ============ SIGNUP PAGE ============ */
 .signup-page-form {
+  position: relative;
   max-width: 500px;
   margin: 0 auto;
   background: none;
@@ -807,6 +809,49 @@ body::before {
   margin-top: 0.3rem;
   font-weight: 300;
   font-style: italic;
+}
+
+/* ============ RSVP CONFIRMATION ============ */
+.rsvp-confirm {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--pink);
+  border-radius: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.rsvp-confirm.show {
+  display: flex;
+  opacity: 1;
+}
+
+.rsvp-confirm-text {
+  font-family: 'Caveat', cursive;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--red);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--red);
+  width: 0;
+  animation: typewrite 0.8s steps(16) 0.3s forwards, blink-caret 0.6s step-end 3;
+}
+
+@keyframes typewrite {
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
 }
 
 /* ============ BLOG ============ */

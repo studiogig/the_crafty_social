@@ -62,18 +62,18 @@ if (signupForm) {
   });
 }
 
-// RSVP form — submits to Google Forms via hidden iframe
+// RSVP form — submits to Google Forms, shows handwritten confirmation
 const rsvpForm = document.getElementById('rsvp-form');
-if (rsvpForm) {
+const rsvpConfirm = document.getElementById('rsvp-confirm');
+if (rsvpForm && rsvpConfirm) {
   rsvpForm.addEventListener('submit', () => {
-    const btn = rsvpForm.querySelector('button');
-    btn.textContent = "See you there!";
-    btn.style.background = 'var(--red-dark)';
     setTimeout(() => {
+      rsvpConfirm.classList.add('show');
+    }, 200);
+    setTimeout(() => {
+      rsvpConfirm.classList.remove('show');
       rsvpForm.reset();
-      btn.textContent = "I'll be there";
-      btn.style.background = '';
-    }, 3000);
+    }, 4000);
   });
 }
 
