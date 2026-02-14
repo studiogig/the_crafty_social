@@ -657,7 +657,7 @@ a.nav-logo:active {
   font-size: clamp(2.2rem, 5vw, 3.5rem);
   line-height: 1.05;
   text-transform: uppercase;
-  color: var(--red);
+  color: #DF1814;
   margin-bottom: 0.5rem;
   letter-spacing: 0.02em;
 }
