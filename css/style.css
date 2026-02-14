@@ -274,30 +274,30 @@ a.nav-logo:active {
 .stitch-divider::before {
   content: '';
   display: inline-block;
-  width: 200px;
-  height: 18px;
+  width: 320px;
+  height: 24px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   /* default squiggle */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 18' fill='none'%3E%3Cpath d='M3 10 C15 3, 28 15, 45 9 S68 2, 85 10 S108 16, 125 8 S148 2, 165 10 S185 15, 197 8' stroke='%23DF1814' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 24' fill='none'%3E%3Cpath d='M4 13 C20 4, 40 20, 65 12 S95 3, 125 13 S160 22, 190 11 S220 3, 250 14 S280 21, 316 10' stroke='%23DF1814' stroke-width='4.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
 }
 
 /* Each divider gets a unique hand-drawn line */
 .stitch-divider:nth-of-type(4n+1)::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 18' fill='none'%3E%3Cpath d='M3 10 C15 3, 28 15, 45 9 S68 2, 85 10 S108 16, 125 8 S148 2, 165 10 S185 15, 197 8' stroke='%23DF1814' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 24' fill='none'%3E%3Cpath d='M4 13 C20 4, 40 20, 65 12 S95 3, 125 13 S160 22, 190 11 S220 3, 250 14 S280 21, 316 10' stroke='%23DF1814' stroke-width='4.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
 }
 
 .stitch-divider:nth-of-type(4n+2)::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 18' fill='none'%3E%3Cpath d='M3 8 C20 14, 35 3, 55 9 S78 16, 100 8 S125 1, 145 10 S170 16, 197 7' stroke='%23DF1814' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 24' fill='none'%3E%3Cpath d='M4 10 C28 19, 52 4, 80 12 S115 21, 150 10 S185 2, 215 13 S255 20, 285 9 S305 5, 316 12' stroke='%23DF1814' stroke-width='4.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
 }
 
 .stitch-divider:nth-of-type(4n+3)::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 18' fill='none'%3E%3Cpath d='M3 11 C18 4, 40 14, 58 7 S80 3, 100 11 S130 15, 148 7 S175 4, 197 10' stroke='%23DF1814' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 24' fill='none'%3E%3Cpath d='M4 14 C25 5, 55 20, 85 10 S115 4, 145 14 S185 22, 210 9 S245 4, 275 15 S300 19, 316 11' stroke='%23DF1814' stroke-width='4.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
 }
 
 .stitch-divider:nth-of-type(4n)::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 18' fill='none'%3E%3Cpath d='M3 7 C22 15, 42 3, 62 10 S88 15, 110 7 S135 2, 155 11 S180 14, 197 9' stroke='%23DF1814' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 24' fill='none'%3E%3Cpath d='M4 9 C30 20, 60 4, 90 13 S125 20, 160 9 S195 3, 225 14 S260 21, 290 10 S310 6, 316 13' stroke='%23DF1814' stroke-width='4.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
 }
 
 /* ============ SECTION HEADERS (shared) ============ */
