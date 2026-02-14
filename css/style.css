@@ -93,7 +93,7 @@ body::before {
   font-family: 'Anton', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: var(--red);
+  color: #DF1814;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -101,7 +101,7 @@ body::before {
 }
 
 .nav-links a:hover { opacity: 0.6; }
-.nav-links a.active { opacity: 1; border-bottom: 2px solid var(--red); padding-bottom: 2px; }
+.nav-links a.active { opacity: 1; border-bottom: 2px solid #DF1814; padding-bottom: 2px; }
 
 /* Nav logo — persistent on all screen sizes */
 a.nav-logo,
@@ -114,7 +114,7 @@ a.nav-logo:active {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--red);
+  color: #DF1814;
   text-decoration: none;
   line-height: 1;
 }
