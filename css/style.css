@@ -999,14 +999,14 @@ footer .footer-nav a:hover { opacity: 0.7; }
 .hero-event-label {
   font-family: 'Caveat', cursive;
   font-size: 1.4rem;
-  color: var(--red);
+  color: #DF1814;
   margin-bottom: 0.2rem;
 }
 
 .hero-event-date {
   font-family: 'Anton', sans-serif;
   font-size: 3rem;
-  color: var(--red);
+  color: #DF1814;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 0.02em;
@@ -1015,7 +1015,7 @@ footer .footer-nav a:hover { opacity: 0.7; }
 .hero-event-details {
   font-family: 'Lora', serif;
   font-size: 0.95rem;
-  color: var(--red);
+  color: #DF1814;
   margin-top: 0.4rem;
   font-style: italic;
 }
@@ -1029,7 +1029,7 @@ footer .footer-nav a:hover { opacity: 0.7; }
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--pink);
-  background: var(--red);
+  background: #DF1814;
   text-decoration: none;
   transition: opacity 0.3s ease;
 }
