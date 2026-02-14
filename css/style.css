@@ -1324,7 +1324,7 @@ footer .footer-nav a:hover { opacity: 0.7; }
   z-index: 0;
 }
 
-body.has-page-illustration > *:not(.page-illustration) {
+body.has-page-illustration > *:not(.page-illustration):not(.site-nav):not(.mobile-nav-overlay) {
   position: relative;
   z-index: 1;
 }
