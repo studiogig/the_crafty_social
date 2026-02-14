@@ -818,7 +818,7 @@ a.nav-logo:active {
 
 /* ============ RSVP CONFIRMATION ============ */
 .rsvp-confirm {
-  display: none;
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
@@ -831,12 +831,15 @@ a.nav-logo:active {
   justify-content: center;
   z-index: 10;
   opacity: 0;
-  transition: opacity 0.4s ease;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  pointer-events: none;
 }
 
 .rsvp-confirm.show {
-  display: flex;
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .rsvp-confirm-text {
@@ -848,6 +851,9 @@ a.nav-logo:active {
   white-space: nowrap;
   border-right: 3px solid var(--red);
   width: 0;
+}
+
+.rsvp-confirm.show .rsvp-confirm-text {
   animation: typewrite 0.8s steps(16) 0.3s forwards, blink-caret 0.6s step-end 3;
 }
 

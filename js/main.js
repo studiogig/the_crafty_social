@@ -67,6 +67,9 @@ const rsvpForm = document.getElementById('rsvp-form');
 const rsvpConfirm = document.getElementById('rsvp-confirm');
 if (rsvpForm && rsvpConfirm) {
   rsvpForm.addEventListener('submit', () => {
+    // Reset animation by removing show, forcing reflow, then re-adding
+    rsvpConfirm.classList.remove('show');
+    void rsvpConfirm.offsetWidth;
     setTimeout(() => {
       rsvpConfirm.classList.add('show');
     }, 200);
