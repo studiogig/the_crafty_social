@@ -50,10 +50,21 @@
   <p class="section-sub fade-in">One email per event. That's it.</p>
 
   <div class="signup-page-form fade-in">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd5xyYRQva4sJHJ37kx4lGsBULq56WyYG0dT39-L6u_pO2diA/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 12px;">Loading…</iframe>
-    <p class="signup-note" style="margin-top: 1rem; text-align: center;">
-      We'll never share your email. Unsubscribe any time.
-    </p>
+    <form id="signup-form" action="https://docs.google.com/forms/d/e/1FAIpQLSd5xyYRQva4sJHJ37kx4lGsBULq56WyYG0dT39-L6u_pO2diA/formResponse" method="POST" target="hidden-form-target">
+      <div class="form-group">
+        <label for="signup-name">Your name</label>
+        <input type="text" id="signup-name" name="entry.508613779" placeholder="Jane">
+      </div>
+      <div class="form-group">
+        <label for="signup-email">Email address</label>
+        <input type="email" id="signup-email" name="entry.1690055078" placeholder="jane@example.com" required>
+      </div>
+      <button type="submit" class="btn-primary" style="width: 100%;">Count me in</button>
+      <p class="signup-note" style="margin-top: 1rem; text-align: center;">
+        We'll never share your email. Unsubscribe any time.
+      </p>
+    </form>
+    <iframe name="hidden-form-target" style="display:none;"></iframe>
   </div>
 </section>
 

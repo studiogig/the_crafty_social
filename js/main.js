@@ -47,24 +47,34 @@ if (navToggle && mobileOverlay) {
   });
 }
 
-// Signup form handler (placeholder — hook up to real backend)
-function handleSignup(e) {
-  e.preventDefault();
-  const input = e.target.querySelector('input[type="email"]');
-  const email = input.value;
-  const btn = e.target.querySelector('button');
+// Signup form — submits to Google Forms via hidden iframe
+const signupForm = document.getElementById('signup-form');
+if (signupForm) {
+  signupForm.addEventListener('submit', () => {
+    const btn = signupForm.querySelector('button');
+    btn.textContent = "You're on the list!";
+    btn.style.background = 'var(--terracotta)';
+    signupForm.reset();
+    setTimeout(() => {
+      btn.textContent = 'Count me in';
+      btn.style.background = '';
+    }, 3000);
+  });
+}
 
-  // TODO: Send to your email service (Mailchimp, ConvertKit, Cloudflare Worker, etc.)
-  console.log('Signup:', email);
-
-  btn.textContent = "You're on the list! 🎉";
-  btn.style.background = 'var(--terracotta)';
-  input.value = '';
-
-  setTimeout(() => {
-    btn.textContent = 'Count me in';
-    btn.style.background = '';
-  }, 3000);
+// RSVP form — submits to Google Forms via hidden iframe
+const rsvpForm = document.getElementById('rsvp-form');
+if (rsvpForm) {
+  rsvpForm.addEventListener('submit', () => {
+    const btn = rsvpForm.querySelector('button');
+    btn.textContent = "See you there!";
+    btn.style.background = 'var(--red-dark)';
+    setTimeout(() => {
+      rsvpForm.reset();
+      btn.textContent = "I'll be there";
+      btn.style.background = '';
+    }, 3000);
+  });
 }
 
 // Contact form handler (placeholder)
