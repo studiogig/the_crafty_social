@@ -132,17 +132,19 @@ a.nav-logo:active {
 
 .nav-toggle span {
   display: block;
-  width: 24px;
-  height: 2.5px;
-  background: var(--red);
-  margin: 5px 0;
+  height: 3px;
+  background: #DF1814;
   transition: all 0.3s ease;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
-.nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-toggle span:nth-child(1) { width: 28px; margin-bottom: 6px; transform: rotate(-2deg); }
+.nav-toggle span:nth-child(2) { width: 22px; margin-bottom: 6px; margin-left: 2px; transform: rotate(1deg); }
+.nav-toggle span:nth-child(3) { width: 26px; transform: rotate(-1deg); }
+
+.nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); width: 28px; }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+.nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); width: 28px; }
 
 /* Mobile tile overlay — completely hidden on desktop */
 .mobile-nav-overlay {
@@ -1228,17 +1230,17 @@ footer .footer-nav a:hover { opacity: 0.7; }
   }
 
   .hero-event-btn {
-    padding: 0.8rem 2.5rem;
-    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
   }
 
   .hero-instagram-link {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .hero-instagram-link svg {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
   }
 }
 
