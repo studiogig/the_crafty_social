@@ -1018,14 +1018,16 @@ a.nav-logo:active {
 
 /* ============ BLOG POST ============ */
 .blog-post-back {
-  display: inline-block;
+  display: block;
   font-family: 'Caveat', cursive;
   font-size: 1.2rem;
   color: var(--red);
   text-decoration: none;
-  padding: 5rem 2rem 0;
-  position: relative;
-  z-index: 2;
+  padding: 0.6rem 2rem;
+  position: sticky;
+  top: 3.2rem;
+  z-index: 90;
+  background: var(--pink);
 }
 
 .blog-post-back:hover { text-decoration: underline; }
