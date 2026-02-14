@@ -425,8 +425,8 @@ a.nav-logo:active {
 }
 
 .about-card p {
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.6;
   color: var(--red);
   font-weight: 300;
 }
@@ -481,7 +481,7 @@ a.nav-logo:active {
 
 .craft-pill .text h4 {
   font-family: 'Anton', sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -490,7 +490,8 @@ a.nav-logo:active {
 }
 
 .craft-pill .text p {
-  font-size: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.6;
   color: var(--red);
   text-align: left;
   font-weight: 300;
@@ -519,7 +520,7 @@ a.nav-logo:active {
 .detail-item {
   background: none;
   border: 3px solid #DF1814;
-  padding: 1rem 1.2rem;
+  padding: 1.5rem;
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -554,10 +555,10 @@ a.nav-logo:active {
 }
 
 .detail-item p {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--red);
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* ============ GALLERY ============ */
@@ -1127,7 +1128,7 @@ footer .footer-nav a:hover { opacity: 0.7; }
   font-weight: 700;
   color: #DF1814;
   background: none;
-  border: 3.5px solid #DF1814;
+  border: 3px solid #DF1814;
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
   text-decoration: none;
   transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
