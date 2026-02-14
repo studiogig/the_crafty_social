@@ -243,6 +243,40 @@ a.nav-logo:active {
   opacity: 1;
 }
 
+.mobile-nav-overlay .mobile-nav-contact {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.45s;
+}
+
+.mobile-nav-overlay.open .mobile-nav-contact {
+  opacity: 1;
+}
+
+.mobile-nav-overlay .mobile-nav-contact a {
+  display: inline;
+  width: auto;
+  max-width: none;
+  padding: 0;
+  border: none;
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--red);
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-nav-overlay .mobile-nav-contact a:hover {
+  opacity: 0.6;
+  background: none;
+  color: var(--red);
+}
+
 /* ============ HERO ============ */
 .hero {
   position: relative;
