@@ -1016,6 +1016,99 @@ a.nav-logo:active {
 .blog-empty .emoji { font-size: 3rem; margin-bottom: 1rem; }
 .blog-empty p { font-family: 'Caveat', cursive; font-size: 1.3rem; color: var(--red); }
 
+/* ============ BLOG POST ============ */
+.blog-post-back {
+  display: inline-block;
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  color: var(--red);
+  text-decoration: none;
+  padding: 0 2rem;
+  margin-top: 1rem;
+}
+
+.blog-post-back:hover { text-decoration: underline; }
+
+.blog-post-header {
+  text-align: center;
+  padding: 0 2rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.blog-post-tag {
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+.blog-post-header h1 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--red);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.blog-post-header h1 em { font-style: normal; }
+
+.blog-post-date {
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  color: var(--red);
+}
+
+.blog-post-body {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+}
+
+.blog-post-body p {
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  color: var(--red-dark);
+}
+
+.blog-post-body h2 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: var(--red);
+  letter-spacing: 0.02em;
+  margin: 2.5rem 0 1rem;
+}
+
+.blog-post-body h3 {
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--red);
+  margin: 2rem 0 0.8rem;
+}
+
+.blog-post-body img {
+  width: 100%;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  margin: 1.5rem 0;
+}
+
+.blog-post-body blockquote {
+  border-left: 3px solid var(--red);
+  padding-left: 1.2rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--red);
+}
+
 /* ============ FOOTER ============ */
 footer {
   padding: 3rem 2rem;
