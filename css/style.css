@@ -1130,11 +1130,28 @@ footer .footer-nav a:hover { opacity: 0.7; }
     opacity: 1;
   }
 
-  /* Hero poster — crop to logo area on mobile */
+  /* Hero poster — fill viewport, pin left edge, fade at bottom */
+  .hero {
+    overflow: hidden;
+    position: relative;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to top, var(--pink) 10%, transparent 100%);
+    pointer-events: none;
+    z-index: 5;
+  }
   .hero-poster {
     height: 100vh;
+    width: auto;
+    max-width: none;
     object-fit: cover;
-    object-position: top left;
+    object-position: left top;
   }
 
   /* Subpage hero — less top padding on mobile */
@@ -1198,10 +1215,16 @@ footer .footer-nav a:hover { opacity: 0.7; }
     font-size: 1rem;
   }
 
-  /* Hero event overlay — adjust on mobile */
+  /* Hero event overlay — bottom of page on mobile */
   .hero-event-overlay {
-    top: 12%;
-    right: 5%;
+    top: auto;
+    right: auto;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    text-align: center;
+    z-index: 20;
   }
 
   .hero-event-btn {
