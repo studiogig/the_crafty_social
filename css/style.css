@@ -274,9 +274,12 @@ a.nav-logo:active {
 .stitch-divider::before {
   content: '';
   display: inline-block;
-  width: 200px;
-  height: 2px;
-  background: var(--red);
+  width: 220px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 12' fill='none'%3E%3Cpath d='M2 7 C12 3, 22 9, 35 6 S52 2, 65 6 S82 10, 95 6 S112 2, 125 6 S142 10, 155 6 S172 2, 185 6 S202 10, 218 5' stroke='%23A01820' stroke-width='1.8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 /* ============ SECTION HEADERS (shared) ============ */
