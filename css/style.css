@@ -1020,9 +1020,9 @@ footer .footer-nav a:hover { opacity: 0.7; }
 .hero-instagram-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   font-family: 'Anton', sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: #DF1814;
@@ -1031,7 +1031,7 @@ footer .footer-nav a:hover { opacity: 0.7; }
 }
 
 .hero-instagram-link:hover { opacity: 0.7; }
-.hero-instagram-link svg { width: 18px; height: 18px; fill: #DF1814; }
+.hero-instagram-link svg { width: 24px; height: 24px; fill: #DF1814; }
 
 .hero-event-label {
   font-family: 'Caveat', cursive;
