@@ -1023,8 +1023,9 @@ a.nav-logo:active {
   font-size: 1.2rem;
   color: var(--red);
   text-decoration: none;
-  padding: 0 2rem;
-  margin-top: 1rem;
+  padding: 5rem 2rem 0;
+  position: relative;
+  z-index: 2;
 }
 
 .blog-post-back:hover { text-decoration: underline; }
