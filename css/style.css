@@ -293,7 +293,7 @@ a.nav-logo:active {
 
 .section-header em {
   font-style: normal;
-  color: var(--red-dark);
+  color: inherit;
 }
 
 .section-sub {
@@ -323,7 +323,7 @@ a.nav-logo:active {
   line-height: 1.15;
 }
 
-.about h2 em { font-style: normal; color: var(--red-dark); }
+.about h2 em { font-style: normal; color: inherit; }
 
 .about-grid {
   display: grid;
@@ -558,7 +558,7 @@ a.nav-logo:active {
   letter-spacing: 0.02em;
 }
 
-.cta h2 em { font-style: normal; color: var(--red-dark); }
+.cta h2 em { font-style: normal; color: inherit; }
 
 .cta-sub {
   font-size: 1.1rem;
@@ -662,7 +662,7 @@ a.nav-logo:active {
   letter-spacing: 0.02em;
 }
 
-.page-hero h1 em { font-style: normal; color: var(--red-dark); }
+.page-hero h1 em { font-style: normal; color: inherit; }
 
 .page-hero .page-desc {
   max-width: 540px;
