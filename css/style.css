@@ -530,18 +530,19 @@ a.nav-logo:active {
 .detail-item:nth-child(even) { border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px; transform: rotate(0.5deg); }
 
 .detail-item .icon {
-  font-size: 1.4rem;
+  font-size: 2.8rem;
   flex-shrink: 0;
   width: auto;
   height: auto;
   background: none;
-  color: var(--red);
+  color: #DF1814;
   border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Anton', sans-serif;
-  font-weight: 400;
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .detail-item h4 {
