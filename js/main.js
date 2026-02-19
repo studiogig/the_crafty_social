@@ -110,16 +110,28 @@ const cheatTabs = document.querySelectorAll('.cheat-tab');
 if (cheatTabs.length) {
   cheatTabs.forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.cheat-section').forEach(s => s.classList.add('cheat-hidden'));
-      cheatTabs.forEach(b => b.classList.remove('active'));
+      const target = document.getElementById(btn.dataset.tab);
+      if (!target) return;
 
-      document.getElementById(btn.dataset.tab).classList.remove('cheat-hidden');
+      // Switch active tab
+      cheatTabs.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // Re-observe fade-in elements in the newly revealed tab
-      document.getElementById(btn.dataset.tab).querySelectorAll('.fade-in:not(.visible)').forEach(el => observer.observe(el));
+      // Switch visible section
+      document.querySelectorAll('.cheat-section').forEach(s => s.classList.add('cheat-hidden'));
+      target.classList.remove('cheat-hidden');
 
-      document.querySelector('.cheat-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Instantly reveal all fade-in elements (no replay animation)
+      target.querySelectorAll('.fade-in:not(.visible)').forEach(el => {
+        el.classList.add('visible');
+      });
+
+      // Scroll tabs into view only if they're above the viewport
+      const tabBar = document.querySelector('.cheat-tabs');
+      const tabBarTop = tabBar.getBoundingClientRect().top;
+      if (tabBarTop < 0) {
+        tabBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 }
