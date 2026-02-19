@@ -1521,18 +1521,15 @@ body.has-page-illustration .hero {
 
 /* ============ CHEAT SHEET ============ */
 
-/* Tab bar — sticky below nav */
+/* Tab bar */
 .cheat-tabs {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.6rem;
   padding: 1.2rem 1rem;
-  background: rgba(245, 181, 200, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  position: sticky;
-  top: 52px;
+  background: var(--pink);
+  position: relative;
   z-index: 50;
 }
 
@@ -1828,7 +1825,6 @@ body.has-page-illustration .hero {
   .cheat-tabs {
     gap: 0.4rem;
     padding: 0.8rem 0.5rem;
-    top: 44px;
   }
 
   .cheat-tab {
