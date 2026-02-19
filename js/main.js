@@ -104,3 +104,33 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     link.classList.add('active');
   }
 });
+
+// Cheat Sheet — tab switching
+const cheatTabs = document.querySelectorAll('.cheat-tab');
+if (cheatTabs.length) {
+  cheatTabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cheat-section').forEach(s => s.classList.add('cheat-hidden'));
+      cheatTabs.forEach(b => b.classList.remove('active'));
+
+      document.getElementById(btn.dataset.tab).classList.remove('cheat-hidden');
+      btn.classList.add('active');
+
+      // Re-observe fade-in elements in the newly revealed tab
+      document.getElementById(btn.dataset.tab).querySelectorAll('.fade-in:not(.visible)').forEach(el => observer.observe(el));
+
+      document.querySelector('.cheat-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+}
+
+// Cheat Sheet — glossary search
+const glossarySearch = document.getElementById('glossarySearch');
+if (glossarySearch) {
+  glossarySearch.addEventListener('input', () => {
+    const q = glossarySearch.value.toLowerCase();
+    document.querySelectorAll('.cheat-term-card').forEach(card => {
+      card.style.display = card.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+}
