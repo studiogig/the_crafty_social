@@ -48,104 +48,76 @@
   </div>
 </div>
 
-<!-- RSVP STICKY BAR -->
-<div class="rsvp-bar">
-  <a href="#rsvp">RSVP — Friday 20th February</a>
-</div>
-
 <!-- PAGE HERO -->
 <section class="page-hero">
-  <h1 class="fade-in">Next <em>Event</em></h1>
+  <h1 class="fade-in">Our <em>Events</em></h1>
   <p class="page-desc fade-in">
+    Whether you're here to craft, swap, or both — there's something coming for you.
+  </p>
+</section>
+
+<div class="stitch-divider">&middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
+
+<!-- CRAFT EVENINGS -->
+<section class="page-section" style="text-align: center;">
+  <p class="section-sub fade-in">Next meetup</p>
+  <h2 class="section-header fade-in">Friday 13th <em>March</em></h2>
+  <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0 1rem;">
+    <span class="fade-in" style="font-family: 'Lora', serif; font-size: 0.95rem; color: var(--red);">7pm onwards</span>
+    <span class="fade-in" style="font-family: 'Lora', serif; font-size: 0.95rem; color: var(--red);">Bath area — TBC</span>
+    <span class="fade-in" style="font-family: 'Lora', serif; font-size: 0.95rem; color: var(--red);">Free</span>
+  </div>
+  <p class="fade-in" style="font-family: 'Lora', serif; font-size: 1rem; color: var(--charcoal); max-width: 520px; margin: 1rem auto 0;">
     Grab a drink, bring your project, and settle in for an evening of crafting and good company.
   </p>
 </section>
 
 <div class="stitch-divider">&middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
 
-<!-- NEXT EVENT -->
+<!-- SWAP SHOP — COMING SOON -->
 <section class="page-section" style="text-align: center;">
-  <p class="section-sub fade-in">Next meetup</p>
-  <h2 class="section-header fade-in">Friday 20th <em>February</em></h2>
-  <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0 2rem;">
-    <span class="fade-in" style="font-family: 'Lora', serif; font-size: 0.95rem; color: var(--red);">7pm onwards</span>
-    <span class="fade-in" style="font-family: 'Lora', serif; font-size: 0.95rem; color: var(--red);">Bathampton Mill, Bath</span>
-    <span class="fade-in" style="font-family: 'Lora', serif; font-size: 0.95rem; color: var(--red);">Free</span>
-  </div>
+  <p class="section-sub fade-in">Coming soon</p>
+  <h2 class="section-header fade-in">The Swap <em>Shop</em></h2>
+  <p class="fade-in" style="font-family: 'Lora', serif; font-size: 1rem; color: var(--charcoal); max-width: 520px; margin: 1rem auto 0;">
+    Got yarn you'll never use? Fabric scraps looking for a new home? The Swap Shop is a chance to bring along your unwanted craft supplies and swap them with others. One crafter's stash is another's treasure.
+  </p>
 </section>
 
 <div class="stitch-divider">&middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
 
-<!-- RSVP -->
-<section id="rsvp" class="page-section" style="max-width: 600px;">
-  <h2 class="section-header fade-in">RSVP for this <em>event</em></h2>
-  <p class="section-sub fade-in">Let us know you're coming</p>
+<!-- REGISTER INTEREST -->
+<section id="register" class="page-section" style="max-width: 600px;">
+  <h2 class="section-header fade-in">Register your <em>interest</em></h2>
+  <p class="section-sub fade-in">Let us know what you'd like to come along to</p>
 
   <div class="signup-page-form fade-in">
-    <form id="rsvp-form" action="https://docs.google.com/forms/d/e/1FAIpQLSefnTCDtVay9iKe0OQauugeB4H68zYNBiCFO2lbIVxvTl_KKg/formResponse" method="POST" target="hidden-rsvp-target">
-      <input type="hidden" name="entry.1714984004" value="Friday 20th February 2026">
+    <form id="interest-form" action="https://docs.google.com/forms/d/e/1FAIpQLSefnTCDtVay9iKe0OQauugeB4H68zYNBiCFO2lbIVxvTl_KKg/formResponse" method="POST" target="hidden-interest-target">
+      <input type="hidden" id="interest-type" name="entry.1714984004" value="">
       <div class="form-group">
-        <label for="rsvp-name">Your name</label>
-        <input type="text" id="rsvp-name" name="entry.224048063" placeholder="Jane" required>
+        <label for="interest-name">Your name</label>
+        <input type="text" id="interest-name" name="entry.224048063" placeholder="Jane" required>
       </div>
       <div class="form-group">
-        <label for="rsvp-email">Email address</label>
-        <input type="email" id="rsvp-email" name="entry.1552300807" placeholder="jane@example.com" required>
+        <label for="interest-email">Email address</label>
+        <input type="email" id="interest-email" name="entry.1552300807" placeholder="jane@example.com" required>
       </div>
-      <button type="submit" class="btn-primary" style="width: 100%;">I'll be there</button>
+      <div class="form-group">
+        <label>I'm interested in</label>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+          <label style="display: flex; align-items: center; gap: 0.6rem; font-family: 'Lora', serif; font-size: 0.95rem; cursor: pointer;">
+            <input type="checkbox" name="interest" value="Craft Evenings" style="accent-color: var(--red); width: 18px; height: 18px;"> Craft Evenings
+          </label>
+          <label style="display: flex; align-items: center; gap: 0.6rem; font-family: 'Lora', serif; font-size: 0.95rem; cursor: pointer;">
+            <input type="checkbox" name="interest" value="Swap Shop" style="accent-color: var(--red); width: 18px; height: 18px;"> The Swap Shop
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn-primary" style="width: 100%;">Count me in</button>
       <p class="signup-note" style="margin-top: 1rem; text-align: center;">
-        No commitment — just helps us know who to expect.
+        No commitment — we'll just keep you in the loop.
       </p>
     </form>
-    <iframe name="hidden-rsvp-target" style="display:none;"></iframe>
-    <div class="rsvp-confirm" id="rsvp-confirm">
-      <span class="rsvp-confirm-text">See you there!</span>
-    </div>
-  </div>
-</section>
-
-<div class="stitch-divider">&middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
-
-<!-- THE DETAILS -->
-<section class="details">
-  <h2 class="fade-in">The <em>details</em></h2>
-
-  <div class="detail-items">
-    <div class="detail-item fade-in">
-      <div class="icon">1</div>
-      <div>
-        <h4>7pm onwards</h4>
-        <p>Come when you can, leave when you like.</p>
-      </div>
-    </div>
-    <div class="detail-item fade-in">
-      <div class="icon">2</div>
-      <div>
-        <h4>Bathampton Mill</h4>
-        <p>A gorgeous pub right on the River Avon. Mill Ln, Bathampton, Bath BA2 6TS.</p>
-      </div>
-    </div>
-    <div class="detail-item fade-in">
-      <div class="icon">3</div>
-      <div>
-        <h4>Completely free</h4>
-        <p>Just buy your own drinks from the bar. That's it. No catch.</p>
-      </div>
-    </div>
-    <div class="detail-item fade-in">
-      <div class="icon">4</div>
-      <div>
-        <h4>Bring your own project</h4>
-        <p>Whatever you're working on — or come empty-handed and learn something new from the group.</p>
-      </div>
-    </div>
-    <div class="detail-item fade-in">
-      <div class="icon">5</div>
-      <div>
-        <h4>Women only, 18+</h4>
-        <p>A relaxed space created for women, by women. All skill levels welcome — from first-timers to old hands.</p>
-      </div>
-    </div>
+    <iframe name="hidden-interest-target" style="display:none;"></iframe>
   </div>
 </section>
 
@@ -154,7 +126,7 @@
 <!-- CTA -->
 <section class="cta">
   <div class="cta-inner">
-    <h2 class="fade-in">Don't miss the <em>next one</em></h2>
+    <h2 class="fade-in">Don't miss a <em>thing</em></h2>
     <p class="cta-sub fade-in">
       Join the mailing list and we'll let you know when each event is announced.
     </p>

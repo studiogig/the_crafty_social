@@ -96,6 +96,30 @@ if (rsvpForm) {
   });
 }
 
+// Interest form — collects checkbox values and submits to Google Forms
+const interestForm = document.getElementById('interest-form');
+if (interestForm) {
+  interestForm.addEventListener('submit', (e) => {
+    const checked = Array.from(interestForm.querySelectorAll('input[name="interest"]:checked'));
+    if (checked.length === 0) {
+      e.preventDefault();
+      alert('Please select at least one option.');
+      return;
+    }
+    const values = checked.map(cb => cb.value).join(', ');
+    document.getElementById('interest-type').value = values;
+    const btn = interestForm.querySelector('button');
+    const originalText = btn.textContent;
+    btn.textContent = "You're on the list!";
+    btn.style.background = 'var(--red)';
+    interestForm.reset();
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.style.background = '';
+    }, 3000);
+  });
+}
+
 // Set active nav link based on current page
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a').forEach(link => {
